@@ -43,7 +43,7 @@ if [ "$TERM" != "dumb" ]; then
     alias ls='ls --color=auto'
 fi
 
-. /home/ladeno/.aliases
+. ~/.aliases
 
 # set variable identifying the chroot you work in
 if [ -z "$debian_chroot" -a -r /etc/debian_chroot ]; then
@@ -74,11 +74,10 @@ export GTK2_RC_FILES=$HOME/.gtkrc-2.0
 # this will display the username, date, time, a calendar, the amount of users, and the up time.
 clear
 # Gotta love ASCII art with figlet
-figlet "BiAtCh, " $USER;
+figlet "Bonsoir"
 echo -e ""
-echo -ne "Today is "; date
+echo -ne "On est le "; date
 echo -e ""; cal ;
-echo -ne "Up time:";uptime | awk /'up/'
 echo "";
 
 #------------------------------------------
@@ -120,3 +119,4 @@ extract () {
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+

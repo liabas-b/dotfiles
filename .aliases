@@ -1,10 +1,12 @@
-# My aliases
-# alias =''
 alias ne='emacs -nw'
+alias v='vim'
 
 # Rails aliases
 alias r='rails s'
-alias bi='bundle install --without development'
+alias gs='git status'
+alias gc='git commit -m $1'
+alias ga='git add -p $1'
+alias bi='bundle install --without production'
 alias test='bundle exec rspec spec --tag focus'
 alias g='bundle exec rake db:test:prepare && bundle exec guard'
 alias ci='git add -A . && git commit -a -m $1'
@@ -14,19 +16,18 @@ alias dbreset='dbclean && bundle exec rake db:populate || bundle exec db:seed'
 alias dbi='bundle exec rake db:migrate && bundle exec rake db:populate || bundle exec db:seed'
 
 # some more ls aliases
-alias ls='ls -hF --color'    # add colors for filetype recognition
-alias lx='ls -lXB'        # sort by extension
-alias lk='ls -lSr'        # sort by size
-alias la='ls -Al'        # show hidden files
-alias lr='ls -lR'        # recursice ls
-alias lt='ls -ltr'        # sort by date
-alias lm='ls -al |more'        # pipe through 'more'
-alias tree='tree -Cs'        # nice alternative to 'ls'
-alias ll='ls -l'        # long listing
-alias l='ls -hF --color'    # quick listing
+alias ls='ls -hF --color' # add colors for filetype recognition
+alias lx='ls -lXB' # sort by extension
+alias lk='ls -lSr' # sort by size
+alias la='ls -Al' # show hidden files
+alias lr='ls -lR' # recursice ls
+alias lt='ls -ltr' # sort by date
+alias lm='ls -al |more' # pipe through 'more'
+alias tree='tree -Cs' # nice alternative to 'ls'
+alias ll='ls -l' # long listing
+alias l='ls -hF --color' # quick listing
 alias lsize='ls --sort=size -lhr' # list by size
-alias l?='cat /home/will/technical/tips/ls'
-alias lsd='ls -l | grep "^d"'   #list only directories
+alias lsd='ls -l | grep "^d"' #list only directories
 
 # Command substiution
 alias ff='sudo find / -name $1'
@@ -34,14 +35,10 @@ alias df='df -h -x tmpfs -x usbfs'
 alias psg='ps -ef | grep $1'
 alias h='history | grep $1'
 alias rm='rm -i'
-
 alias i='sudo apt-get install $1'
 alias as='aptitude search '
 alias sb='source ~/.bashrc && source ~/.profile'
-alias dev-rails='cd ~/d/r'
-alias pop='bundle exec rake db:populate'
-alias get_ip_devices_connected='grep OFFER /var/log/system.log'
-alias blog='cd ~/r/d/coffee-blog/'
-alias bk='./script/backup_prod_db'
-alias cdlms='cd ~/d/r/web-service'
-alias lms='ssh webservice@locatemystickers.com'
+alias ..='cd ..'
+alias ph='history | cut -c 8-'
+alias phs='history | cut -c 8- | grep'
+
